@@ -1,17 +1,17 @@
 <?php
 
 try{
-	$url = parse_url(getenv("HEROKU_POSTGRESQL_PINK_URL"));
+	$url = parse_url(getenv("HEROKU_POSTGRESQL_BLUE_URL"));
 
 	$host = $url["host"];
 	$username = $url["user"];
 	$password = $url["pass"];
 	$database = substr($url["path"], 1);
 }catch(Exception $ex){
-	$host = "localhost";
+	$host 		= "localhost";
 	$username = "postgres";
 	$password = "postgres";
-	$database = "lms-db";
+	$database = "ats-db";
 }
 
 return array(
